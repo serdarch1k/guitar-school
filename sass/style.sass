@@ -13,6 +13,13 @@
 
 @font-face
    font-family: "MontserratT"
+   src: url('../fonts/Montserrat-Medium.ttf')
+   font-display: swap
+   font-weight: medium
+   font-style: normal
+
+@font-face
+   font-family: "MontserratT"
    src: url('../fonts/Montserrat-SemiBold.ttf')
    font-display: swap
    font-weight: bold
@@ -252,9 +259,23 @@ $color-orange: #F68A66
    border-radius: 20px
    display: flex
    align-items: flex-end
+   transition: .5s
    filter: drop-shadow(4px 5px 5px rgba(0, 0, 0, 0.25))
+   &:hover
+      cursor: pointer
+      filter: drop-shadow(5px 7px 7px rgba(0, 0, 0, 0.50))
+   &:hover img
+      opacity: 0.4
+   &:hover .cards-item__hover-box
+      bottom: 15%
+      opacity: 1
+   &:hover .cards-item__text
+      transform: rotate(0deg)
+      top: 15%
+      right: 30px
    &__img
       height: 345px
+      transition: .5s
    &__text
       width: 280px
       font-size: 36px
@@ -264,6 +285,32 @@ $color-orange: #F68A66
       top: 140px
       right: -35px
       font-weight: bold
+      transition: .5s
+   &__hover-box
+      position: absolute  
+      bottom: 5%
+      right: 25px
+      width: 170px
+      opacity: 0
+      transition: .5s
+   &__hover-text
+      font-size: 15px
+      font-weight: medium
+      color: #000
+      text-align: center
+      margin-bottom: 15px
+   &__hover-btn
+      width: 100%
+      color: #fff
+      border: none
+      font-size: 14px
+      padding: 5px 0
+      border-radius: 100px
+      background: $color-orange
+      text-align: center
+      cursor: pointer
+      filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25))
+      
 
 .cards-item_orange
    background: $color-orange
